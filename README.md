@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+# E-Commerce Application
+This project is a basic e-commerce application built with React, TypeScript, and Tailwind CSS. It allows users to browse products, view product details, and manage their shopping cart. The application dynamically fetches data from FakeStoreAPI.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Product Listing Page: Displays products in a responsive grid layout.
+Product Detail Page: Shows detailed information about a selected product.
+Filtering and Sorting: Allows users to filter and sort products by categories via API calls.
+Cart Functionality:
+Add products to the cart.
+Remove products from the cart.
+View the total cart value and item count.
+Persist cart data using localStorage.
+Dynamic Routing: Navigate between pages with React Router.
+Mobile Responsiveness: Fully responsive design for all screen sizes.
 
-Currently, two official plugins are available:
+Tech Stack
+Frontend: React, TypeScript, Tailwind CSS
+State Management: Context API
+Routing: React Router
+Data Fetching: Axios, FakeStoreAPI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Getting Started
+Follow these steps to set up and run the project locally.
 
-## Expanding the ESLint configuration
+Prerequisites
+Node.js installed (v16 or later recommended)
+npm or yarn as a package manager
+Installation
+Clone the repository:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+bash
+git clone https://github.com/mohitjangir17/e-commerce-interview.git
+Navigate to the project directory:
 
-- Configure the top-level `parserOptions` property like this:
+bash
+cd ecommerce-app-interview
+Install dependencies:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+bash
+npm install
+Start the development server:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+bash
+npm run dev
+The application will be available at http://localhost:5173.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Scripts
+npm run dev: Run the development server.
+npm run build: Build the project for production.
+npm run serve: Serve the production build locally.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
